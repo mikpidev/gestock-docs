@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[API] Users · Gestock Knowledge Base</title>
+  <meta name="description" content="Matriz de permisos de la API de Gestock por rol: superadmin, org_admin, store_admin y user.">
+  <link rel="canonical" href="https://documentation.gestock.site/api/users.html">
+  <meta property="og:title" content="[API] Users · Gestock Knowledge Base">
+  <meta property="og:description" content="Permisos de la API por rol. Las políticas de tenant se documentan por separado.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://documentation.gestock.site/api/users.html">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="banner" role="status">
+    <p><span class="banner-kicker">En desarrollo / Under construction</span> La matriz de permisos de la API ya está publicada. Las guías del SaaS todavía no.</p>
+  </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#af2828"/>
+          <text x="16" y="22" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#ffffff">G</text>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Gestock</span>
+          <span class="brand-sub">Knowledge Base</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="../index.html">Inicio</a>
+        <a href="users.html" aria-current="page">[API] Users</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="crumb"><a href="../index.html">Inicio</a> <span aria-hidden="true">/</span> [API] Users</p>
+        <p class="eyebrow">API</p>
+        <h1>[API] Users</h1>
+        <p class="deck">Permisos de la API por rol.</p>
+      </div>
+    </section>
+    <div class="wrap">
+      <article class="panel">
+        <p class="lede" id="matriz-nota">Esta matriz documenta la API. Las guías de uso del SaaS se publicarán aparte.</p>
+        <p class="callout" id="tenant-nota">Las políticas de tenant son independientes de esta matriz y no se listan aquí.</p>
+        <p class="scroll-hint">En pantallas angostas, desliza la tabla para ver los cuatro roles.</p>
+        <div class="table-scroll">
+          <table id="matriz" aria-describedby="matriz-nota tenant-nota">
+            <caption>Claves de permiso de la API y marcas por rol. El comodín .* no se abre en operaciones distintas.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Permiso</th>
+                <th scope="col"><code translate="no">superadmin</code></th>
+                <th scope="col"><code translate="no">org_admin</code></th>
+                <th scope="col"><code translate="no">store_admin</code></th>
+                <th scope="col"><code translate="no">user</code></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="group"><td colspan="5">superadmin</td></tr>
+              <tr data-permission="companies.*">
+                <th scope="row"><code translate="no">companies.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr class="group"><td colspan="5">superadmin · org_admin</td></tr>
+              <tr data-permission="stores.*">
+                <th scope="row"><code translate="no">stores.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr class="group"><td colspan="5">superadmin · org_admin · store_admin</td></tr>
+              <tr data-permission="users.*">
+                <th scope="row"><code translate="no">users.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr data-permission="roles.assign">
+                <th scope="row"><code translate="no">roles.assign</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr data-permission="tax_info.*">
+                <th scope="row"><code translate="no">tax_info.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr data-permission="hacienda_access.*">
+                <th scope="row"><code translate="no">hacienda_access.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr data-permission="correlatives.*">
+                <th scope="row"><code translate="no">correlatives.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr data-permission="dashboard.view">
+                <th scope="row"><code translate="no">dashboard.view</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr data-permission="dashboard.download_pdf">
+                <th scope="row"><code translate="no">dashboard.download_pdf</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="no"><span class="mark no" aria-label="Denegado">✗</span></td>
+              </tr>
+              <tr class="group"><td colspan="5">superadmin · org_admin · store_admin · user</td></tr>
+              <tr data-permission="sales.*">
+                <th scope="row"><code translate="no">sales.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+              </tr>
+              <tr data-permission="customers.*">
+                <th scope="row"><code translate="no">customers.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+              </tr>
+              <tr data-permission="products.*">
+                <th scope="row"><code translate="no">products.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+              </tr>
+              <tr data-permission="credit_notes.*">
+                <th scope="row"><code translate="no">credit_notes.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+              </tr>
+              <tr data-permission="debit_notes.*">
+                <th scope="row"><code translate="no">debit_notes.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+              </tr>
+              <tr data-permission="dte.download">
+                <th scope="row"><code translate="no">dte.download</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+              </tr>
+              <tr data-permission="dte.download_bulk">
+                <th scope="row"><code translate="no">dte.download_bulk</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+              </tr>
+              <tr data-permission="contingencies.*">
+                <th scope="row"><code translate="no">contingencies.*</code></th>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+                <td data-access="yes"><span class="mark yes" aria-label="Permitido">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="legend">
+          <li><span class="mark yes" aria-hidden="true">✓</span> Permitido</li>
+          <li><span class="mark no" aria-hidden="true">✗</span> Denegado</li>
+        </ul>
+        <p class="fine"><code translate="no">dashboard.view</code> y <code translate="no">dashboard.download_pdf</code> van en filas distintas, con las mismas marcas. <code translate="no">dte.download</code> y <code translate="no">dte.download_bulk</code> también. Las columnas son solo estos cuatro roles de la API.</p>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Gestock Knowledge Base</p>
+      <p>Gestock — POS en la nube + DTE para El Salvador.</p>
+      <p>En desarrollo / Under construction · documentation.gestock.site</p>
+      <p>CMS futuro: por definir.</p>
+    </div>
+  </footer>
+</body>
+</html>
