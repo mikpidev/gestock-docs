@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestock Knowledge Base</title>
+  <meta name="description" content="Gestock — POS en la nube + DTE para El Salvador. Base de conocimiento en desarrollo.">
+  <link rel="canonical" href="https://documentation.gestock.site/">
+  <meta property="og:title" content="Gestock Knowledge Base">
+  <meta property="og:description" content="Gestock — POS en la nube + DTE para El Salvador.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://documentation.gestock.site/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+  <div class="banner" role="status">
+    <p><span class="banner-kicker">En desarrollo / Under construction</span> La matriz de permisos de la API ya está publicada. Las guías del SaaS todavía no.</p>
+  </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#af2828"/>
+          <text x="16" y="22" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="18" font-weight="700" fill="#ffffff">G</text>
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Gestock</span>
+          <span class="brand-sub">Knowledge Base</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html" aria-current="page">Inicio</a>
+        <a href="api/users.html">[API] Users</a>
+      </nav>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="hero">
+      <div class="wrap">
+        <h1>Gestock Knowledge Base</h1>
+        <p class="lead">Gestock — POS en la nube + DTE para El Salvador.</p>
+        <form id="kb-search-form" class="search" role="search" action="index.html" method="get">
+          <label class="sr-only" for="kb-search">Buscar en la base de conocimiento</label>
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.25" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 16.5L20 20.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input id="kb-search" name="q" type="search" placeholder="Buscar en la base de conocimiento" autocomplete="off" enterkeyhint="search">
+          <button type="submit">Buscar</button>
+        </form>
+        <p id="search-status" class="search-status" aria-live="polite">Mostrando todas las tarjetas. El texto filtra esta página; no busca artículos.</p>
+        <p class="hero-note"><a href="api/users.html">La matriz de usuarios</a> documenta la API. Las guías del SaaS se publicarán después. Las políticas de tenant se documentan por separado.</p>
+        <noscript>
+          <p class="hero-note">Sin JavaScript se listan todas las tarjetas. El filtro local no corre.</p>
+        </noscript>
+      </div>
+    </section>
+    <div class="wrap">
+      <section id="tarjetas" class="directory" aria-label="Secciones">
+        <a class="card card-live" href="api/users.html" data-search="api users usuarios roles permiso permisos matriz superadmin org_admin store_admin user companies stores sales customers products credit_notes debit_notes dte dashboard correlatives tax_info hacienda_access contingencies download_pdf download_bulk">
+          <span class="badge badge-live">API · Publicado</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="11" r="4" fill="none" stroke="currentColor" stroke-width="1.75"/>
+            <path d="M7 25c1.4-4 4.4-6 9-6s7.6 2 9 6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
+          <h2>[API] Users</h2>
+          <p>Matriz de permisos por rol.</p>
+        </a>
+        <article class="card" data-search="primeros pasos arranque inicio guia saas">
+          <span class="badge">SaaS · Próximamente</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M8 27V6M8 7h13l-2.2 4 2.2 4H8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+          <h2>Primeros pasos</h2>
+          <p>Artículo del SaaS. Próximamente.</p>
+        </article>
+        <article class="card" data-search="punto de venta pos guia saas">
+          <span class="badge">SaaS · Próximamente</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M9 6h14v20l-2.2-1.4L18.5 26l-2.5-1.4L13.5 26l-2.3-1.4L9 26V6z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+            <path d="M13 12h6M13 16h6M13 20h4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
+          <h2>Punto de venta</h2>
+          <p>Artículo del SaaS. Próximamente.</p>
+        </article>
+        <article class="card" data-search="dte documento tributario documentos guia saas">
+          <span class="badge">SaaS · Próximamente</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M10 5h8l6 6v16H10V5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+            <path d="M18 5v6h6M13 17l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2>DTE</h2>
+          <p>Artículo del SaaS. Próximamente.</p>
+        </article>
+        <article class="card" data-search="clientes customers guia saas">
+          <span class="badge">SaaS · Próximamente</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.75"/>
+            <circle cx="21" cy="13" r="2.4" fill="none" stroke="currentColor" stroke-width="1.75"/>
+            <path d="M6.5 23.5c.8-3 2.8-4.5 5.5-4.5s4.7 1.5 5.5 4.5M18.2 23.2c.5-2 1.8-3.2 3.5-3.2 1.6 0 2.8 1 3.3 2.6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
+          <h2>Clientes</h2>
+          <p>Artículo del SaaS. Próximamente.</p>
+        </article>
+        <article class="card" data-search="productos products guia saas">
+          <span class="badge">SaaS · Próximamente</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M6 12 16 7l10 5-10 5L6 12zM6 12v8l10 5 10-5v-8M16 17v8" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+          <h2>Productos</h2>
+          <p>Artículo del SaaS. Próximamente.</p>
+        </article>
+        <article class="card" data-search="notas credito debito credit_notes debit_notes guia saas">
+          <span class="badge">SaaS · Próximamente</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M8 6h10l6 6v14H8V6z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+            <path d="M18 6v6h6M12 16h8M12 20h6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
+          <h2>Notas de crédito y débito</h2>
+          <p>Artículo del SaaS. Próximamente.</p>
+        </article>
+        <article class="card" data-search="contingencias contingencies guia saas">
+          <span class="badge">SaaS · Próximamente</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 5 28 26H4L16 5z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+            <path d="M16 13v6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+            <circle cx="16" cy="22.5" r="1.1" fill="currentColor"/>
+          </svg>
+          <h2>Contingencias</h2>
+          <p>Artículo del SaaS. Próximamente.</p>
+        </article>
+        <article class="card" data-search="reportes dashboard pdf guia saas">
+          <span class="badge">SaaS · Próximamente</span>
+          <svg class="icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M7 26V16M16 26V8M25 26V13" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+            <path d="M5 26h22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
+          <h2>Reportes</h2>
+          <p>Artículo del SaaS. Próximamente.</p>
+        </article>
+      </section>
+      <p id="search-empty" class="empty" hidden>Ninguna tarjeta coincide. El buscador de artículos depende del CMS, que sigue por definir.</p>
+      <section class="scope" aria-labelledby="alcance-titulo">
+        <h2 id="alcance-titulo">Alcance</h2>
+        <dl>
+          <div>
+            <dt>API</dt>
+            <dd>La página <a href="api/users.html">[API] Users</a> es la matriz de permisos. Esa parte ya está publicada.</dd>
+          </div>
+          <div>
+            <dt>SaaS</dt>
+            <dd>El resto de tarjetas reserva guías del producto. Todavía no hay artículos.</dd>
+          </div>
+          <div>
+            <dt>Tenant</dt>
+            <dd>Las políticas de tenant se documentan por separado y no entran en la matriz de roles.</dd>
+          </div>
+        </dl>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="footer-brand">Gestock Knowledge Base</p>
+      <p>Gestock — POS en la nube + DTE para El Salvador.</p>
+      <p>En desarrollo / Under construction · documentation.gestock.site</p>
+      <p>CMS futuro: por definir.</p>
+    </div>
+  </footer>
+  <script src="assets/js/search.js"></script>
+</body>
+</html>
